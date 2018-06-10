@@ -16,42 +16,39 @@ import {
 
 import {StackNavigator} from 'react-navigation';
 
-//import Form from './components/src/LoginForm';
+
+import LoginForm from './components/src/LoginForm';
+import SignUpForm from './components/src/SignUpForm';
 //import Form from './components/src/SignUpForm';
-//hello
 
-
-// const RootStack = StackNavigator(
-//   {
-//       Login: {
-//         screen: LoginActivity, 
-//       },
-
-//       SignUp: {
-//         screen: SignUpActivity,
-//       },
-//     },
-
-//     {
-//       initialRouteName: 'Login', 
-//     }
-// );
-
-
-export default class App extends Component<Props> {
-  render() {
-    return (
-      <KeyboardAvoidingView behavior='padding' style={styles.wrapper}>
-        <ImageBackground style={styles.container} source={require('./components/img/signUp_bg.jpg')}>
-        <Text style={styles.header}> Personal Banking App </Text>
-        <Form/>
-        </ImageBackground>
-
-        {/* <RootStack /> */}
-      </KeyboardAvoidingView>
-    );
+export default Projects = StackNavigator(
+  { 
+    Login: {
+     screen: LoginForm,
+    },
+    
+    SignUp: {
+      screen: SignUpForm,
+    },
   }
-}
+);
+
+
+
+// export default class App extends Component {
+//   render() {
+//     return (
+//       <KeyboardAvoidingView behavior='padding' style={styles.wrapper}>
+//         <ImageBackground style={styles.container} source={require('./components/img/signUp_bg.jpg')}>
+//         <Text style={styles.header}> Personal Banking App </Text>
+//         <LoginForm/>
+//         </ImageBackground>
+
+//         {/* <RootStack /> */}
+//       </KeyboardAvoidingView>
+//     );
+//   }
+// }
 
 const styles = StyleSheet.create({
   wrapper: {

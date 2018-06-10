@@ -12,19 +12,19 @@ import {
   View,
   TextInput,
   TouchableOpacity,
+  Button,
   KeyboardAvoidingView
 } from 'react-native';
 
-import {StackNavigator} from 'react-navigation';
-
-export default class LoginForm extends React.Component {
+export default class LoginForm extends Component {
 
     static navigationOptions =
-    {
-        title: 'LoginActivity',
+    { 
+        title: 'Welcome',
     };
 
     render() {
+    
     return (
         <View style={styles.formContainer}>
             <Text style={styles.pageHead}>
@@ -52,7 +52,7 @@ export default class LoginForm extends React.Component {
 
             <TouchableOpacity 
                 style={styles.clickableText}
-                onPress={this.signUpPage}>
+                onPress = { this.signUpPage }>
                 <Text style={styles.clickableText}> New User - Sign Up </Text>
             </TouchableOpacity>
 
@@ -66,8 +66,8 @@ export default class LoginForm extends React.Component {
     }  
   
     signUpPage = () => {
-        alert('sign in here pls');
-        //this.props.navigation.navigate('SignUpActivity');        
+        //alert('sign in here pls');
+        this.props.navigation.navigate('SignUp');
     }
 
 }
@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
       clickableText: {
         alignItems: 'center',
         fontSize: 15,
-        color: 'rgba(255,255,255,0.7)',
+        color: '#fff',
         marginBottom: 5,
         marginTop: 5,
     

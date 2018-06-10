@@ -15,13 +15,11 @@ import {
   KeyboardAvoidingView
 } from 'react-native';
 
-import {StackNavigator} from 'react-navigation';
-
 export default class SignUpForm extends React.Component {
     
     static navigationOptions =
     {
-        title: 'SignUpActivity',
+        title: 'SignUpForm',
     };
 
   render() {
@@ -63,13 +61,17 @@ export default class SignUpForm extends React.Component {
 
             <TouchableOpacity 
                 style={styles.clickableText}
-                onPress={this.signUpPage}>
+                onPress={this.loginPageStatus}>
                 <Text style={styles.clickableText}> Login here </Text>
             </TouchableOpacity>
 
         </View>
     );
   }
+  loginPageStatus = () => {
+    //alert('User is logged in');
+    this.props.navigation.navigate('Login');        
+}  
 }
 
 const styles = StyleSheet.create({
@@ -111,7 +113,7 @@ const styles = StyleSheet.create({
       clickableText: {
         alignItems: 'center',
         fontSize: 15,
-        color: 'rgba(255,255,255,0.7)',
+        color: '#fff',
         marginBottom: 5,
         marginTop: 5,
     
