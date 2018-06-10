@@ -16,8 +16,9 @@ import {
 
 import {StackNavigator} from 'react-navigation';
 
-import Form from './components/src/LoginForm';
+//import Form from './components/src/LoginForm';
 //import Form from './components/src/SignUpForm';
+//hello
 
 
 // const RootStack = StackNavigator(
